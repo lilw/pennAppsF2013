@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>VisLink</title>
+	<meta name="author" content="Tara Siegel">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+		api_key: k2gj7729wgfp
+  		onLoad: onLinkedInLoad
+	</script>
+
+	<link rel="shortcut icon" type="image/x-icon" href="giraffeLogo.jpg">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="container" class="container">
+		<div class="header-info">
+			<b>VisLink</b>
+
+			<p id="about" style="display:hidden">Visualize your LinkedIn Connections based off a keyword of your choice. Nodes are grouped based off companies matching the keyword and color is determined by 1st, 2nd and 3rd connection</p>
+			
+			<!--login with linkedin -->
+			<span id = "login">
+				<script type="in/Login">
+					<span id = "logged-in">Logged in as <?js= firstName ?><?js= lastName ?></span>
+				</script>
+			</span>
+			<input id="search-button" type="image" src="search-button.png" name="image" width="35">
+			<input id="keyword-input" type="text" placeholder="Keyword"autocomplete="off" size="40%">
+			
+			
+		</div>
+		
+		<div id = "peopleSearchForm">
+		</div>
+		<div id = "peopleSearchResults">
+		</div>
+
+		<div id="visualization-container">
+			<svg id="visualization" width="600px" height="600px"></svg>
+		</div>
+
+		<div id="footer" class="footer">
+			Made with love by <a href="http://tarasiegel.com">Tara Siegel</a> and <a href="http://www.linkedin.com/pub/lily-wang/53/220/439">Lily Wang</a> in 2013
+		</div>
+
+		<script type="text/javascript" src="script.js"></script>
+
+	</div>
+
+	
+</body>	
+
+
+
+
+</html>
